@@ -392,6 +392,19 @@ function setDepartment(department_id_string) {
 			</td>
 		</tr>
 		<tr>
+			<td align="right" nowrap="nowrap"><?php echo $AppUI->_('Project Function');?></td>
+			<td colspan="3">
+				<?php echo arraySelect($pfunction, 'project_function', 'size="1" class="text"', $row->project_function, true);?> *
+			</td>
+		</tr>
+		<tr>
+			<td align="right" nowrap="nowrap"><?php echo $AppUI->_('Project Assembly');?></td>
+			<td colspan="3">
+				<?php echo arraySelect($passembly, 'project_assembly', 'size="1" class="text"', $row->project_assembly, true);?> *
+			</td>
+		</tr>
+		
+		<tr>
 			<td align="right" nowrap="nowrap"><?php echo $AppUI->_('Color Identifier');?></td>
 			<td nowrap="nowrap">
 				<input type="text" name="project_color_identifier" value="<?php echo (@$row->project_color_identifier) ? @$row->project_color_identifier : 'FFFFFF';?>" size="10" maxlength="6" onBlur="setColor();" class="text" /> *

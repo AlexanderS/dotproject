@@ -6,6 +6,8 @@ if (!defined('DP_BASE_DIR')) {
 // project statii
 $pstatus = dPgetSysVal('ProjectStatus');
 $ptype = dPgetSysVal('ProjectType');
+$passembly = dPgetSysVal('ProjectAssembly');
+$pfunction = dPgetSysVal('ProjectFunction');
 
 $ppriority_name = dPgetSysVal('ProjectPriority');
 $ppriority_color = dPgetSysVal('ProjectPriorityColor');

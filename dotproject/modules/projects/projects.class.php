@@ -43,6 +43,8 @@ class CProject extends CDpObject {
 	var $project_contacts = NULL;
 	var $project_priority = NULL;
 	var $project_type = NULL;
+	var $project_assembly = NULL;
+	var $project_function = NULL;
 	
 	function CProject() {
 		$this->CDpObject('projects', 'project_id');
@@ -615,7 +617,7 @@ function projects_list_data($user_id=false) {
 	             . ', com.company_description, tc.critical_task, tc.project_actual_end_date' 
 	             . ', if (tp.task_log_problem IS NULL, 0, tp.task_log_problem) AS task_log_problem' 
 				 . ', tt.total_tasks, tsy.my_tasks, ts.project_percent_complete' 
-				 . ', ts.project_duration, u.user_username');
+				 . ', ts.project_duration, u.user_username, p.project_assembly, p.project_function');
 	$q->addJoin('companies', 'com', 'p.project_company = com.company_id');
 	$q->addJoin('users', 'u', 'p.project_owner = u.user_id');
 	$q->addJoin('tasks_critical', 'tc', 'p.project_id = tc.task_project');

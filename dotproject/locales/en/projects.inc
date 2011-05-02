@@ -1,7 +1,7 @@
 ##
 ## DO NOT MODIFY THIS FILE BY HAND!
 ##
-"Links",
+"Project Function",
 "% of work done (based on duration)",
 "(no end date)",
 "(no start date)",
@@ -84,6 +84,7 @@
 "Last Update",
 "Last activity date",
 "Levels to display",
+"Links",
 "Log",
 "Log All",
 "Log All Projects",
@@ -123,6 +124,7 @@
 "Progress",
 "Progress Chart (completed/in progress/pending)",
 "Project",
+"Project Assembly",
 "Project Assignee Details",
 "Project Hours",
 "Project Name",

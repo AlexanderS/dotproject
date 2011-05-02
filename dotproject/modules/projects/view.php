@@ -343,6 +343,16 @@ echo $projectPriorityColor[$obj->project_priority]?>"><?php
 echo $AppUI->_($projectPriority[$obj->project_priority]); ?></td>
 		</tr>
 		<tr>
+			<td align="right" nowrap="nowrap"><?php echo $AppUI->_('Project Assembly'); ?>:</td>
+			<td class="hilite" width="100%"><?php 
+echo $AppUI->_($passembly[$obj->project_assembly]); ?></td>
+		</tr>
+		<tr>
+			<td align="right" nowrap="nowrap"><?php echo $AppUI->_('Project Function'); ?>:</td>
+			<td class="hilite" width="100%"><?php 
+echo $AppUI->_($pfunction[$obj->project_function]); ?></td>
+		</tr>
+		<tr>
 			<td align="right" nowrap="nowrap"><?php echo $AppUI->_('Type'); ?>:</td>
 			<td class="hilite" width="100%"><?php 
 echo $AppUI->_($ptype[$obj->project_type]); ?></td>
