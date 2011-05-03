@@ -94,7 +94,7 @@ $titleBlock->addCell();
 $titleBlock->addCell($AppUI->_('Company') . '/' . $AppUI->_('Department') . ':');
 
 //get list of all departments, filtered by the list of permitted companies.
-$q->clear();
+$q  = new DBQuery;
 $q->addTable('companies', 'c');
 $q->addQuery('c.company_id, c.company_name, dep.*');
 $q->addJoin('departments', 'dep', 'c.company_id = dep.dept_company');
