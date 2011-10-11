@@ -314,7 +314,7 @@ $gts = array();
  *
  */
 
-$project =& new CProject;
+$project = new CProject;
 if ($project_id > 0) {
 	$criticalTasks = $project->getCriticalTasks($project_id);
 	$project->load($project_id);
@@ -440,7 +440,7 @@ if ($caller == 'todo') {
 
 
 // get any specifically denied tasks
-$task =& new CTask;
+$task = new CTask;
 $task->setAllowedSQL($AppUI->user_id, $q);
 $proTasks = $q->loadHashList('task_id');
 //echo '<pre>';
@@ -1203,7 +1203,7 @@ $show_gantt = 1;
 		$temp_dir = (dPgetConfig('overlay_dir') == '' ? DP_BASE_DIR : dPgetConfig('overlay_dir')) . "/files/temp";
 		$base_url  = dPgetConfig( 'base_url' );
 		require( $AppUI->getLibraryClass( 'ezpdf/class.ezpdf' ) );
-		$pdf =& new Cezpdf($paper='A4',$orientation='landscape');
+		$pdf = new Cezpdf($paper='A4',$orientation='landscape');
 		$pdf->ezSetCmMargins( 2, 1.5, 1.4, 1.4 ); //(top, bottom, left, right)
 //		$pdf->ezSetCmMargins( 3.25, 2, 1, 1 );
 /*

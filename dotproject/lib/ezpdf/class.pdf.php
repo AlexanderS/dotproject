@@ -2637,8 +2637,6 @@ function PRVT_getBytes(&$data,$pos,$num){
 function addPngFromFile($file,$x,$y,$w=0,$h=0){
   // read in a png file, interpret it, then add to the system
   $error=0;
-  $tmp = get_magic_quotes_runtime();
-  set_magic_quotes_runtime(0);
   $fp = @fopen($file,'rb');
   if ($fp){
     $data='';
@@ -2650,7 +2648,6 @@ function addPngFromFile($file,$x,$y,$w=0,$h=0){
     $error = 1;
     $errormsg = 'trouble opening file: '.$file;
   }
-  set_magic_quotes_runtime($tmp);
   
   if (!$error){
     $header = chr(137).chr(80).chr(78).chr(71).chr(13).chr(10).chr(26).chr(10);

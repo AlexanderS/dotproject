@@ -117,7 +117,7 @@ $q->addWhere('project_status != 7 AND task_dynamic = 1');
 if ($project_id) {
 	$q->addWhere('task_project = ' . $project_id);
 }
-$task =& new CTask;
+$task = new CTask;
 $task->setAllowedSQL($AppUI->user_id, $q);
 $proTasks = $q->loadHashList('task_id');
 $q->clear();

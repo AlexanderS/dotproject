@@ -63,7 +63,7 @@ if ($selected && count($selected)) {
 			if (isset($children)) {
 				foreach ($children as $child_id) {
 					if (getPermission('tasks', 'edit', $child_t->task_id)) {
-						$child_t = &new CTask();
+						$child_t = new CTask();
 						$child_t->load($child_id);
 						$child_t->task_owner = $new_owner;
 						$child_t->store();
